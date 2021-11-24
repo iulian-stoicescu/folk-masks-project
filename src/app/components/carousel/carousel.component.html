@@ -1,1 +1,16 @@
-<p>carousel works!</p>
+<div class="carousel-container">
+  <p-carousel [value]="carouselImages" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+              [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <ng-template let-carouselImage pTemplate="item">
+      <div class="carousel-item">
+        <div class="carousel-item-content">
+          <div class="p-mb-3">
+          </div>
+          <div>
+            <img class="carousel-item-image" [src]="imagePathPrefix + carouselImage" alt="Carousel image 1"/>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
